@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Planets</title>
+    <link rel="stylesheet" href="css/planet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <script src="js/planet.js"></script>
+    <center>
+        <h1>Daftar Planet</h1>
+    </center>
+    <div>
+        <p>This is my Hello World</p>
+        <script>printHelloWorld("this is my arguments")</script>
+    </div>
+    </br>
+    <p>Choose your planet:</p>
+    <select id="planetName">
+        <option value="Alderaan">Alderaan</option>
+        <option value="Yavin IV">Yavin IV</option>
+        <option value="Hoth">Hoth</option>
+        <option value="Dagobah">Dagobah</option>
+    </select>
+</br>
+    </br>
+    <table class="table">
+            <thead>
+              <tr>
+                
+                <th scope="col">Name</th>
+                <th scope="col">Rotation Period</th>
+                <th scope="col">Orbital Period</th>
+                <th scope="col">Diameter</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+                <td><script>
+                var name=document.getElementById("planetName").value;
+                getPlanetData(name, "name");
+                    </script>
+                </td>
+                <td><script>
+                        var name=document.getElementById("planetName").value;
+                        getPlanetData(name, "rotation_period");
+                            </script></td>
+                <td><script>
+                        var name=document.getElementById("planetName").value;
+                        getPlanetData(name, "orbital_period");
+                            </script></td>
+                <td><script>
+                        var name=document.getElementById("planetName").value;
+                        getPlanetData(name, "diameter");
+                            </script></td>
+              </tr>
+
+            </tbody>
+          </table>
+</body>
+</html>
