@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calculator.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Calculator</title>
+    <link rel="shortcut icon" href="images/Calculator_5122x.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="padwidht">
+
+            <h4 style="color:white;" align="center">KALKULATOR<span style="color: #00ff00;">+</span><span style="color: #800080;">-</span><span style="color: #ff0000;">X<span style="color: #0000ff;">/</span></span></h4>
+        <input  type="text" id="angkaPertama">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">x</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" id="angkaKedua">
+        <input type="submit" onclick="kalkulator()" value="=">
+        <input type="text" id="hasil" disabled>
+
+        <script language="javaScript" type="text/javascript">
+            function kalkulator() {
+                var angkaPertama = parseInt(document.getElementById("angkaPertama").value);
+                console.log("angkaPertama adalah " + angkaPertama);
+                var angkaKedua = parseInt(document.getElementById("angkaKedua").value);
+                console.log("angkaKedua adalah " + angkaKedua);
+                var op = document.getElementById("operator").value;
+                var hasil = document.getElementById("hasil");
+                var total;
+                if (isNaN(angkaPertama) || isNaN(angkaKedua)) { alert("isi form dengan angka"); }
+                else {
+                    switch (op) {
+                        case "+":
+                            total = angkaPertama + angkaKedua;
+                            break;
+                        case "-":
+                            total = angkaPertama - angkaKedua;
+                            break;
+                        case "x":
+                            total = angkaPertama * angkaKedua;
+                            break;
+                        case "/":
+                            total = angkaPertama / angkaKedua;
+                            break;
+                        default:
+                            alert("Tidak ada operator " + op);
+                    }
+                }
+                hasil.value = total;
+            }
+
+        </script>
+        <br />
+        <br />
+
+    </div>
+</body>
+
+</html>
