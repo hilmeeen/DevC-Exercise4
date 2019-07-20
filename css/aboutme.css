@@ -3,13 +3,20 @@ body
     background-color: cadetblue
 }
 
-div{
-    background-color: grey
+.grey{
+    background-color: grey;
+    padding: 10px;
+    /* border: 50px */
+    margin: 10px;
 }
 
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    /* width: 50%; */
+  }
+
+  h5, p{
+      color: purple
   }
